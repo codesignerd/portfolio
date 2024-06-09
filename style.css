@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav.navbar li a:hover {
+    background-color: transparent;
+    color: rgba(211, 64, 64, 0.911);
+    transition: all 0.5s;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.absolute .close-icon {
+    padding: 8px;
+    display: inline-block;
+    align-self: flex-end;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(31, 0, 0, 0.9)),
+    url("./img/developer.webp");
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 90vh;
+}
+
+.hero .container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero .scroll-text {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.hero .scroll-text p {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .25rem solid white; /* The typwriter cursor */
+    padding-right: 0.5rem;
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15rem; 
+    animation: 
+      typing 5.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+
+.about .abstract.one {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+  }
+
+.about .abstract.two {
+    position: absolute;
+    bottom: -25px;
+    right: -45px;
+  }
+
+.about .img-card {
+    height: 450px;
+}
+
+.about .img-card img {
+    object-fit: cover;
+    object-position: top left;
+    margin-top: 95%;
+    margin-left: -30px;
+    transform: scale(2.5);
+}
+
+.service, .portfolio {
+    background-color: rgb(253, 247, 247);
+}
+
+.skills .progress {
+    height: 12px;
+}
+
+/* .skills .progress-bar {
+    border-radius: 20px;
+} */
+
+.skills:hover .progress-bar {
+    animation: loading 2s;
+}
+
+.skills .abstract.one {
+    position: absolute;
+    top: 30px;
+    left: -20px;
+  }
+
+.skills .abstract.two {
+    position: absolute;
+    bottom: 35px;
+    right: -15px;
+  }
+
+  /* Component Elements */
+.scroll-top-btn {
+    position: fixed;
+    opacity: 0;
+    bottom: -50px;
+    transform: scale(0.5);
+    right: 16px;
+    border-radius: 8px;
+}
+
+.abstract {
+    width: 150px;
+    height: 150px;
+    border: 10px solid rgb(255, 243, 243);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.progress {
+    background-color: rgb(245, 243, 243);
+}
+
+.c-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 3.25em;
+    font-weight: bold;
+    margin-inline: auto;
+}
+
+/* Utilities Classes*/
+::selection {
+    background-color: rgb(209, 68, 68);
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 767px) {
+    .offscreen {
+        position: absolute;
+        top: 0;
+        right: -1000px;
+    }
+
+    nav.navbar li a {
+        display: block;
+        width: 100%;
+        padding: 12px 32px;
+    }
+
+    nav.navbar li a:hover {
+        background-color: rgb(253, 247, 247);
+        color: rgba(211, 64, 64, 0.911);
+    }
+}
+
+.absolute {
+    background: rgb(253, 247, 247);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-items: flex-start;
+    /* padding: 0px 4px 0px 32px; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 200vh;
+    z-index: 5;
+    animation:
+        sliding 0.5s ease-in-out;
+}
+
+.show {
+    display: block;
+    opacity: 1;
+    bottom: 30px;
+    transform: scale(1);
+    transition: all 1.0s;
+}
+
+.shadow-md {
+    box-shadow: 0px 5px 15px 5px rgba(226, 226, 226, 0.5);
+    transition: all .3s;
+}
+
+/* Animations */
+
+/* The typing effect */
+@keyframes typing {
+    0% { width: 0% }
+    50% { width: 100% }
+    75% { width: 100% }
+    100% { width: 0% }
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+/* The loading effects */
+@keyframes loading {
+    0% { width: 0% }
+    100% { width: attr(data-value) }
+}
+
+/* The sliding effects */
+@keyframes sliding {
+    0% {
+        width: 0vh;
+     }
+    100% {
+        width: attr(data-value);
+    }
+}
