@@ -1,89 +1,88 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 nav.navbar li a:hover {
-    background-color: transparent;
-    color: rgba(211, 64, 64, 0.911);
-    transition: all 0.5s;
+  background-color: transparent;
+  color: rgba(211, 64, 64, 0.911);
+  transition: all 0.5s;
 }
 
 .menu-icon {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .absolute .close-icon {
-    padding: 8px;
-    display: inline-block;
-    align-self: flex-end;
+  padding: 8px;
+  display: inline-block;
+  align-self: flex-end;
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(31, 0, 0, 0.9)),
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(31, 0, 0, 0.9)),
     url("./img/developer.webp");
-    background-position: center;
-    background-size: cover;
-    background-attachment: scroll;
-    height: 90vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 90vh;
 }
 
 .hero .container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .hero .scroll-text {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .hero .scroll-text p {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .25rem solid white; /* The typwriter cursor */
-    padding-right: 0.5rem;
-    white-space: nowrap; /* Keeps the content on a single line */
-    letter-spacing: .15rem; 
-    animation: 
-      typing 5.5s steps(40, end),
-      blink-caret .75s step-end infinite;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.25rem solid white; /* The typwriter cursor */
+  padding-right: 0.5rem;
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.15rem;
+  animation: typing 5.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 .about .abstract.one {
-    position: absolute;
-    top: -50px;
-    left: -50px;
-  }
+  position: absolute;
+  top: -50px;
+  left: -50px;
+}
 
 .about .abstract.two {
-    position: absolute;
-    bottom: -25px;
-    right: -45px;
-  }
+  position: absolute;
+  bottom: -25px;
+  right: -45px;
+}
 
 .about .img-card {
-    height: 450px;
+  height: 450px;
 }
 
 .about .img-card img {
-    object-fit: cover;
-    object-position: top left;
-    margin-top: 95%;
-    margin-left: -30px;
-    transform: scale(2.5);
+  object-fit: cover;
+  object-position: top left;
+  margin-top: 95%;
+  margin-left: -30px;
+  transform: scale(2.5);
 }
 
-.service, .portfolio {
-    background-color: rgb(253, 247, 247);
+.service,
+.portfolio {
+  background-color: rgb(253, 247, 247);
 }
 
 .skills .progress {
-    height: 12px;
+  height: 12px;
 }
 
 /* .skills .progress-bar {
@@ -91,139 +90,204 @@ nav.navbar li a:hover {
 } */
 
 .skills:hover .progress-bar {
-    animation: loading 2s;
+  animation: loading 2s;
 }
 
 .skills .abstract.one {
-    position: absolute;
-    top: 30px;
-    left: -20px;
-  }
+  position: absolute;
+  top: 30px;
+  left: -20px;
+}
 
 .skills .abstract.two {
-    position: absolute;
-    bottom: 35px;
-    right: -15px;
-  }
+  position: absolute;
+  bottom: 35px;
+  right: -15px;
+}
 
-  /* Component Elements */
+.portfolio a:hover i {
+  color: #fff !important;
+  transition: all 0.8s;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+  font-family: "Montseratt", sans-serif;
+}
+
+form .form-group {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(0, 35, 58);
+}
+
+.form-group input,
+textarea {
+  display: block;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid rgb(190, 190, 190);
+  outline: none;
+  font-size: 0.85rem;
+}
+
+.form-group input:focus {
+  outline: 2px solid rgb(13, 137, 253);
+  animation: blink 2.5s infinite;
+}
+
+/* Component Elements */
 .scroll-top-btn {
-    position: fixed;
-    opacity: 0;
-    bottom: -50px;
-    transform: scale(0.5);
-    right: 16px;
-    border-radius: 8px;
+  position: fixed;
+  opacity: 0;
+  bottom: -50px;
+  transform: scale(0.5);
+  right: 16px;
+  border-radius: 8px;
 }
 
 .abstract {
-    width: 150px;
-    height: 150px;
-    border: 10px solid rgb(255, 243, 243);
-    border-radius: 50%;
-    z-index: -1;
+  width: 150px;
+  height: 150px;
+  border: 10px solid rgb(255, 243, 243);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .progress {
-    background-color: rgb(245, 243, 243);
+  background-color: rgb(245, 243, 243);
 }
 
 .c-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 28px;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    font-size: 3.25em;
-    font-weight: bold;
-    margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 3.25em;
+  font-weight: bold;
+  margin-inline: auto;
 }
 
 /* Utilities Classes*/
 ::selection {
-    background-color: rgb(209, 68, 68);
-    color: rgb(255, 255, 255);
+  background-color: rgb(209, 68, 68);
+  color: rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 767px) {
-    .offscreen {
-        position: absolute;
-        top: 0;
-        right: -1000px;
-    }
+  .offscreen {
+    position: absolute;
+    top: 0;
+    right: -1000px;
+  }
 
-    nav.navbar li a {
-        display: block;
-        width: 100%;
-        padding: 12px 32px;
-    }
+  nav.navbar li a {
+    display: block;
+    width: 100%;
+    padding: 12px 32px;
+  }
 
-    nav.navbar li a:hover {
-        background-color: rgb(250, 250, 250);
-        color: rgba(211, 64, 64, 0.911);
-    }
+  nav.navbar li a:hover {
+    background-color: rgb(250, 232, 232);
+    color: rgba(211, 64, 64, 0.911);
+  }
 }
 
 .absolute {
-    background: rgb(255, 252, 252) !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start !important;
-    align-items: flex-start;
-    /* padding: 0px 4px 0px 32px; */
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 80vw;
-    height: 200vh;
-    z-index: 5;
-    animation:
-        sliding 0.5s ease-in-out;
+  background: rgb(255, 252, 252) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start;
+  /* padding: 0px 4px 0px 32px; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 200vh;
+  z-index: 5;
+  animation: sliding 0.5s ease-in-out;
 }
 
 .show {
-    display: block;
-    opacity: 1;
-    bottom: 30px;
-    transform: scale(1);
-    transition: all 1.0s;
+  display: block;
+  opacity: 1;
+  bottom: 30px;
+  transform: scale(1);
+  transition: all 1s;
 }
 
 .shadow-md {
-    box-shadow: 0px 5px 15px 5px rgba(226, 226, 226, 0.5);
-    transition: all .3s;
+  box-shadow: 0px 5px 15px 5px rgba(226, 226, 226, 0.5);
+  transition: all 0.3s;
 }
 
 /* Animations */
 
 /* The typing effect */
 @keyframes typing {
-    0% { width: 0% }
-    50% { width: 100% }
-    75% { width: 100% }
-    100% { width: 0% }
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  75% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
 }
-  
+
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: white; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 
 /* The loading effects */
 @keyframes loading {
-    0% { width: 0% }
-    100% { width: attr(data-value) }
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: attr(data-value);
+  }
 }
 
 /* The sliding effects */
 @keyframes sliding {
-    0% {
-        width: 0vh;
-     }
-    100% {
-        width: attr(data-value);
-    }
+  0% {
+    width: 0vh;
+  }
+  100% {
+    width: attr(data-value);
+  }
+}
+
+@keyframes blink {
+  from {
+    outline: 2px solid rgb(188, 223, 255);
+  }
+  to {
+    outline: 2px solid rgb(13, 137, 253);
+  }
 }
