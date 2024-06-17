@@ -137,12 +137,23 @@ textarea {
   border-radius: 6px;
   border: 1px solid rgb(190, 190, 190);
   outline: none;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+}
+
+form button {
+   display: block;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 600;
 }
 
 .form-group input:focus {
-  outline: 2px solid rgb(13, 137, 253);
-  animation: blink 2.5s infinite;
+  outline: 1px solid rgb(13, 137, 253);
+  /* animation: blink 2.5s infinite; */
 }
 
 /* Component Elements */

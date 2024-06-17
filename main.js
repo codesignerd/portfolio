@@ -33,7 +33,6 @@ function showText() {
     if(i >= text.length) {
         i = 0;
     }
-
     text[i].classList.remove("d-none");
 }
 
@@ -46,19 +45,19 @@ const timer = setInterval(() => {
 // card-hover.js
 // Cards Hover Effect
 const serviceCards = document.querySelectorAll(".card");
+serviceCards.forEach(cardHover);
 
-serviceCards.forEach((card) => {
-    
+function cardHover(card) {
     card.style.cursor = "pointer";
-
+    // add card shadow
     card.addEventListener("mouseover", () => {
         card.classList.add("shadow-md");
     });
-
+    // remove card shadow
     card.addEventListener("mouseout", () => {
         card.classList.remove("shadow-md");
     });
-});
+}
 
 // mobile-menu.js
 // responsive-mobile-menu
@@ -71,17 +70,22 @@ let breakPoint = 768;
 // console.log(deviceWidth);
 
 // Open Menu Button
-mobileMenuBtn.addEventListener("click", () => {
+mobileMenuBtn.addEventListener("click", openMenu);
+
+function openMenu() {
     let deviceWidth = window.innerWidth;
 
     if (deviceWidth < breakPoint) {
-        navMenu.classList.toggle("absolute");
+        navMenu.classList.add("absolute");
         navMenu.classList.remove("d-none");
     }
-});
+}
 
 // Close Menu Button
-mobileCloseBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("absolute");
-        navMenu.classList.add("d-none");
-});
+window.addEventListener("resize",closeMenu);
+mobileCloseBtn.addEventListener("click", closeMenu);
+
+function closeMenu() {
+    navMenu.classList.remove("absolute");
+    navMenu.classList.add("d-none");
+}
