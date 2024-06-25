@@ -263,14 +263,21 @@ form button {
   border-radius: 8px;
 }
 
+.details-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
 .details .box {
-  border-radius: 4px;
+  border-radius: 50px;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
 .details span {
-  font-size: 1.2rem;;
+  font-size: 1.2rem;
 }
 
 .abstract {
@@ -302,41 +309,6 @@ form button {
 ::selection {
   background-color: rgb(209, 68, 68);
   color: rgb(255, 255, 255);
-}
-
-@media screen and (max-width: 767px) {
-  .offscreen {
-    position: absolute;
-    top: 0;
-    right: -1000px;
-  }
-
-  nav.navbar li a {
-    display: block;
-    width: 100%;
-    padding: 12px 32px;
-  }
-
-  nav.navbar li a:hover {
-    background-color: rgb(250, 232, 232);
-    color: rgba(211, 64, 64, 0.911);
-  }
-}
-
-.absolute {
-  background: rgb(255, 252, 252) !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start !important;
-  align-items: flex-start;
-  /* padding: 0px 4px 0px 32px; */
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80vw;
-  height: 200vh;
-  z-index: 5;
-  animation: sliding 0.5s ease-in-out;
 }
 
 .show {
@@ -407,5 +379,49 @@ form button {
   }
   to {
     outline: 2px solid rgb(13, 137, 253);
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .offscreen {
+    position: absolute;
+    top: 0;
+    right: -1000px;
+  }
+
+  .absolute {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 1000vh;
+    animation: sliding 0.5s ease-in-out;
+    z-index: 5;
+  }
+
+  .absolute nav {
+    background: rgb(255, 252, 252) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-items: flex-start;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  nav.navbar li a {
+    display: block;
+    width: 100%;
+    padding: 12px 32px;
+  }
+
+  nav.navbar li a:hover {
+    background-color: rgb(250, 232, 232);
+    color: rgba(211, 64, 64, 0.911);
   }
 }

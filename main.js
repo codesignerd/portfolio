@@ -29,10 +29,8 @@ function showText() {
     text.forEach(value => {
         value.classList.add("d-none");
     });
-
-    if(i >= text.length) {
-        i = 0;
-    }
+    
+    i >= text.length ? i = 0 : i;
     text[i].classList.remove("d-none");
 }
 
@@ -61,11 +59,12 @@ function cardHover(card) {
 
 // mobile-menu.js
 // responsive-mobile-menu
-const navMenu = document.querySelector("nav.navbar");
+const navMenu = document.querySelector(".navbar-container");
 const mobileMenuBtn = document.querySelector(".hamburger-icon");
 const mobileCloseBtn = document.querySelector(".close-icon");
 
 let breakPoint = 768;
+let active;
 
 // console.log(deviceWidth);
 
@@ -79,6 +78,7 @@ function openMenu() {
         navMenu.classList.add("absolute");
         navMenu.classList.remove("d-none");
     }
+     active = true;
 }
 
 // Close Menu Button
@@ -88,4 +88,5 @@ mobileCloseBtn.addEventListener("click", closeMenu);
 function closeMenu() {
     navMenu.classList.remove("absolute");
     navMenu.classList.add("d-none");
+    active = false;
 }
