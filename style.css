@@ -161,10 +161,10 @@ nav.navbar li a:hover {
 
 .about .img-card img {
   object-fit: cover;
-  object-position: top left;
-  margin-top: 95%;
-  margin-left: -30px;
-  transform: scale(2.5);
+  object-position: top center;
+  margin-top: 0;
+  margin-left: 0;
+  transform: scale(1);
 }
 
 .service,
